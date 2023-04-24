@@ -1,0 +1,59 @@
+.searchBlock{
+    width: 600px;
+    height: 75px;
+    background-color: white;
+
+    margin: 0 auto;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.input{
+    width: 400px;
+    height: 30px;
+
+    font-size: 18px;
+
+    border: none;
+    border-bottom: 1px solid #aaa;
+
+    outline: none;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.searchBtn{
+    width: 50px;
+    height: 50px;
+    
+    background-color: white;
+    border: none;
+
+    cursor: pointer;
+}
+
+.searchIcon{
+    width: 35px;
+    height: 35px;
+}
+
+/*Скрытие placeholder при фокусе*/
+
+:focus::-webkit-input-placeholder {
+    color: transparent
+}
+  
+:focus::-moz-placeholder {
+    color: transparent
+}
+  
+:focus:-moz-placeholder {
+    color: transparent
+}
+  
+:focus:-ms-input-placeholder {
+    color: transparent
+}
