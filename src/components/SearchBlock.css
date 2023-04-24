@@ -11,6 +11,10 @@
     justify-content: space-evenly;
 }
 
+.searchBlock.transarent{
+    opacity: 0;
+}
+
 .input{
     width: 400px;
     height: 30px;
