@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import SearchBlock from "./components/SearchBlock";
+import InfoBlock from "./components/InfoBlock";
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   return (
     <main>
       {
-        vision ? <SearchBlock/> : <p>No vision</p>
+        vision ? <SearchBlock/> : <InfoBlock/>
       }
     </main>
   );
