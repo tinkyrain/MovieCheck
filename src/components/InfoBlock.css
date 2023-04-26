@@ -7,36 +7,3 @@
 
     border-radius: 30px;
 }
-
-.topInfoLine{
-    width: 100%;
-    height: 57px;
-
-    display: flex;
-    align-items: center;
-    justify-content: start;
-
-    margin: 10px;
-}
-
-.backArrow{
-    width: 40px;
-    height: 40px;
-}
-
-.backBtn{
-    width: 40px;
-    height: 40px;
-
-    border: none;
-    background-color: white;
-    border-radius: 30px 0 0 0;
-
-    cursor: pointer;
-}
-
-.name{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    margin-left: 190px;
-}
