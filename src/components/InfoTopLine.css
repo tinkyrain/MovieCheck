@@ -4,7 +4,7 @@
 
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
 
     margin: 10px;
 }
@@ -28,5 +28,5 @@
 .name{
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
-    margin-left: 190px;
+    margin-left: 180px;
 }

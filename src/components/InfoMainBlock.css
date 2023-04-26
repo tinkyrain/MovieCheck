@@ -1,0 +1,14 @@
+.InfoMainBlock {
+    width: 100%;
+    height: 600px;
+    
+    display: flex;
+    flex-direction: row;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.InfoText, .InfoImg {
+    width: 50%;
+    height: 100%;
+}
