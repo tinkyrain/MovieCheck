@@ -12,3 +12,28 @@
     width: 50%;
     height: 100%;
 }
+
+.InfoImg{
+   display: flex;
+   justify-content: center; 
+}
+
+.InfoList{
+    list-style: none;
+    margin: 10px;
+}
+
+.InfoList li{
+    background-color: #eaeef3;
+    border-radius: 20px;
+
+    padding: 10px 10px;
+    margin: 20px 0;
+
+    font-size: 17px;
+}
+
+.poster{
+    width: 90%;
+    height: 70%;
+}
