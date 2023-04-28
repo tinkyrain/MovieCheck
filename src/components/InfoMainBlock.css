@@ -9,6 +9,8 @@
 }
 
 .InfoText, .InfoImg {
+    margin-top: 20px;
+
     width: 50%;
     height: 100%;
 }
@@ -36,4 +38,8 @@
 .poster{
     width: 90%;
     height: 70%;
+}
+
+.rating-text{
+    text-align: center;
 }
