@@ -1,0 +1,49 @@
+.InfoMainBlock {
+    width: 100%;
+    height: 550px;
+    
+    display: flex;
+    flex-direction: row;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.InfoText, .InfoImg {
+    width: 50%;
+    height: 100%;
+}
+
+.InfoText{
+    margin-top: 20px;
+}
+
+.InfoImg{
+   display: flex;
+   justify-content: center; 
+}
+
+.InfoList{
+    list-style: none;
+    margin: 10px;
+}
+
+.InfoList li{
+    background-color: #eaeef3;
+    border-radius: 20px;
+
+    padding: 10px 10px;
+    margin: 20px 0;
+
+    font-size: 17px;
+}
+
+.poster{
+    margin-top: 30px;
+
+    width: 90%;
+    height: 75%;
+}
+
+.rating-text{
+    text-align: center;
+}

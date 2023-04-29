@@ -15,7 +15,7 @@ const SearchBlock = () => {
                 <img 
                     className='searchIcon'
                     src='/img/searchIcon.png'
-                    alt='Search'
+                    alt='Поиск'
                 />
             </button>
         </div>

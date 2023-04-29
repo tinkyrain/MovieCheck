@@ -1,8 +1,14 @@
-import './InfoBlock.css'
+import './InfoBlock.css';
+import InfoMainBlock from './InfoMainBlock';
+import InfoTopLine from './InfoTopLine';
+
 
 const InfoBlock = () => {
     return (
-        <p>Info Block</p>
+        <div className='infoBlock'>
+            <InfoTopLine/>
+            <InfoMainBlock/>
+        </div>
     );
 }
 
