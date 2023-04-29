@@ -12,7 +12,7 @@ const InfoMainBlock = () => {
                     <li>Мировые сборы: 1234567890$</li>
                     <li>Премьера в мире: 25 января 2020 </li>
                 </ul>
-                <p class='rating-text'>Рейтинг КП: 6.4</p>
+                <p className='rating-text'>Рейтинг КП: 6.4</p>
             </div>
 
             <div className='InfoImg'>
