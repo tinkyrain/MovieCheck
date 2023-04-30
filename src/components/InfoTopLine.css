@@ -25,8 +25,40 @@
     cursor: pointer;
 }
 
+.block-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+}
+
 .name{
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
-    margin-left: 180px;
+
+    padding-right: 40px;
+}
+
+@media (max-width: 625px) {
+    .name{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 440px) {
+    .name{
+        font-size: 15px;
+    }
+
+    .backArrow{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .backBtn{
+        width: 30px;
+        height: 30px;
+    }
 }
