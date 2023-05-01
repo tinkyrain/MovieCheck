@@ -5,10 +5,12 @@ import InfoTopLine from './InfoTopLine';
 
 const InfoBlock = () => {
     return (
-        <div className='infoBlock'>
-            <InfoTopLine/>
-            <InfoMainBlock/>
-        </div>
+        <section className='info-section'>
+            <div className='infoBlock'>
+                <InfoTopLine/>
+                <InfoMainBlock/>
+            </div>
+        </section>
     );
 }
 

@@ -1,3 +1,11 @@
+.info-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .infoBlock{
     width: 700px;
     height: auto;
@@ -6,4 +14,11 @@
     margin: 20px;
 
     border-radius: 30px;
+}
+
+@media (max-width: 745px) {
+  .info-section{
+    width: 100%;
+    height: auto;
+  }
 }

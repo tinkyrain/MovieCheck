@@ -11,7 +11,7 @@ function App() {
       {
         //vision ? <SearchBlock/> : <InfoBlock/>
       }
-      <InfoBlock/>
+      <SearchBlock/>
     </main>
   );
 }
