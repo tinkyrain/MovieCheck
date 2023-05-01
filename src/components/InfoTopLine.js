@@ -15,7 +15,9 @@ const InfoTopLine = () => {
             <button className='backBtn' onClick={() => back()}>
                <img className='backArrow' alt='Назад' src='/img/backArrow.png'/>
             </button>
-            <h3 className='name'>Название фильма</h3>
+            <div className='block-name'>
+                <h3 className='name'>Название фильма</h3>
+            </div>
         </div>
     );
 }

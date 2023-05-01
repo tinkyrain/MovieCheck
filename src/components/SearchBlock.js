@@ -9,16 +9,18 @@ const SearchBlock = () => {
     }
 
     return(
-        <div className='searchBlock'>
-            <input className='input' placeholder='Поиск...'/>
-            <button className='searchBtn' onClick={() => search()}>
-                <img 
-                    className='searchIcon'
-                    src='/img/searchIcon.png'
-                    alt='Поиск'
-                />
-            </button>
-        </div>
+        <section className='search-section'>
+            <div className='searchBlock'>
+                <input className='input' placeholder='Поиск...'/>
+                <button className='searchBtn' onClick={() => search()}>
+                    <img 
+                        className='searchIcon'
+                        src='/img/searchIcon.png'
+                        alt='Поиск'
+                    />
+                </button>
+            </div>
+        </section>
     );
 } 
 

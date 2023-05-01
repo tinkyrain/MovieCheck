@@ -9,9 +9,8 @@ function App() {
   return (
     <main>
       {
-        //vision ? <SearchBlock/> : <InfoBlock/>
+        vision ? <SearchBlock/> : <InfoBlock/>
       }
-      <InfoBlock/>
     </main>
   );
 }
