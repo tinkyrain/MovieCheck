@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import SearchBlock from "./components/SearchBlock";
 import InfoBlock from "./components/InfoBlock";
-import Loading from "./components/Loading";
 
 
 function App() {

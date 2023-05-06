@@ -17,11 +17,12 @@ const SearchBlock = () => {
             const data = await response.json();
             console.log(data);
             
-            if(data.Response == 'False'){
+            if(data.Response === 'False'){
                 alert(data.Error)
             } else {
                 dispatch({type: 'VISION', visionChange: false})
             }
+            
         } else {
             alert('Error');
         }
