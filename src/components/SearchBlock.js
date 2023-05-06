@@ -4,16 +4,6 @@ import './SearchBlock.css'
 
 const KEY = '7f9a3b82';
 
-let infoMovie = {
-    title: null,
-    year: null,
-    country: null,
-    genre: null,
-    actors: null,
-    director: null,
-    released: null
-}
-
 const SearchBlock = () => {
     const dispatch = useDispatch();
     const [name, setName] = useState('');
@@ -23,31 +13,14 @@ const SearchBlock = () => {
 
     async function search () {
         const response = await fetch(`${URL}`);
-
         if(response.ok){
             const data = await response.json();
-            
             if(data.Response === 'False'){
                 alert(data.Error)
             } else {
-
-                infoMovie = {
-                    title: data.Title,
-                    year: data.Year,
-                    country: data.Country,
-                    genre: data.Genre,
-                    actors: data.Actors,
-                    director: data.Director,
-                    released: data.Released,
-                    rating: data.imdbRating,
-                    poster: data.Poster,
-                }
-                
-                dispatch({type: 'INFO', infoChange: infoMovie})
-                //Vision InfoBlock
+                dispatch({type: 'INFO', infoChange: data})
                 dispatch({type: 'VISION', visionChange: false});
             }
-            
         } else {
             alert('Error');
         }

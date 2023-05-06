@@ -10,16 +10,16 @@ const InfoBlock = () => {
     return (
         <section className='info-section'>
             <div className='infoBlock'>
-                <InfoTopLine title={info.title}/>
+                <InfoTopLine title={info.Title}/>
                 <InfoMainBlock 
-                    year={info.year}
-                    country={info.country}
-                    genre={info.genre}
-                    actors={info.actors}
-                    director={info.director}
-                    released={info.released}
-                    rating={info.rating}
-                    src={info.poster}
+                    year={info.Year}
+                    country={info.Country}
+                    genre={info.Genre}
+                    actors={info.Actors}
+                    director={info.Director}
+                    released={info.Released}
+                    rating={info.imdbRating}
+                    src={info.Poster}
                 />
             </div>
         </section>
