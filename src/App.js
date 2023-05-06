@@ -6,13 +6,15 @@ import Error from "./components/Error";
 
 function App() {
   const vision = useSelector(state => state.searchVision);
+  const error = useSelector(state => state.error);
+  const errorText = useSelector(state => state.textError);
 
   return (
     <main>
       {
-        //vision ? <SearchBlock/> : <InfoBlock/>
+        error ? <Error errorText={errorText}/> : 
+        vision ? <SearchBlock/> : <InfoBlock/>
       }
-      <Error/>
     </main>
   );
 }
