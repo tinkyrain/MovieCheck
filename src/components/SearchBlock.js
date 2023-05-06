@@ -4,11 +4,22 @@ import './SearchBlock.css'
 
 const KEY = '7f9a3b82';
 
+let infoMovie = {
+    title: null,
+    year: null,
+    country: null,
+    genre: null,
+    actors: null,
+    director: null,
+    released: null
+}
+
 const SearchBlock = () => {
     const dispatch = useDispatch();
     const [name, setName] = useState('');
 
     const URL = `http://www.omdbapi.com/?t=${name}&apikey=${KEY}`;
+
 
     async function search () {
         const response = await fetch(`${URL}`);
@@ -19,21 +30,20 @@ const SearchBlock = () => {
             if(data.Response === 'False'){
                 alert(data.Error)
             } else {
-                
-                //Movie info
-                dispatch({
-                    type: 'INFO',
-                    titleChange: data.Title,
-                    yearChange: data.Year,
-                    countryChange: data.Country,
-                    genreChange: data.Genre,
-                    actorsChange: data.Actors,
-                    directorChange: data.Director,
-                    releasedChange: data.Released,
-                    ratingChange: data.imdbRating,
-                    posterChange: data.Poster,
-                });
 
+                infoMovie = {
+                    title: data.Title,
+                    year: data.Year,
+                    country: data.Country,
+                    genre: data.Genre,
+                    actors: data.Actors,
+                    director: data.Director,
+                    released: data.Released,
+                    rating: data.imdbRating,
+                    poster: data.Poster,
+                }
+                
+                dispatch({type: 'INFO', infoChange: infoMovie})
                 //Vision InfoBlock
                 dispatch({type: 'VISION', visionChange: false});
             }

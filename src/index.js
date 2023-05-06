@@ -7,34 +7,20 @@ import { Provider } from 'react-redux';
 
 const defaultState = {
   searchVision: true,
-  title: '',
-  year: '',
-  country: '',
-  genre: '',
-  actors: '',
-  director: '',
-  released: '',
-  rating: '',
-  poster: '',
+  info: {},
 }
 
 const reducer = (state = defaultState, action) => {
   switch(action.type){
     case 'VISION':
-      return {...state, searchVision: state.searchVision = action.visionChange}
+      return {...state, 
+        searchVision: state.searchVision = action.visionChange
+      }
 
     case 'INFO':
-      return {...state, 
-                  title: state.title = action.titleChange,
-                  year: state.year = action.yearChange,
-                  country: state.country = action.countryChange,
-                  genre: state.genre = action.genreChange,
-                  actors: state.actors = action.actorsChange,
-                  director: state.director = action.directorChange,
-                  released: state.released = action.releasedChange,
-                  rating: state.rating = action.ratingChange,
-                  poster: state.poster = action.posterChange,
-              }
+      return{...state,
+        info: state.info = action.infoChange
+      }
   
     default:
       return state;

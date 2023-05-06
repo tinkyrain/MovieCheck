@@ -5,7 +5,7 @@ import InfoTopLine from './InfoTopLine';
 
 
 const InfoBlock = () => {
-    const info = useSelector(state => state);
+    const info = useSelector(state => state.info);
 
     return (
         <section className='info-section'>
