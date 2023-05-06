@@ -15,7 +15,6 @@ const SearchBlock = () => {
 
         if(response.ok){
             const data = await response.json();
-            console.log(data);
             
             if(data.Response === 'False'){
                 alert(data.Error)
@@ -31,7 +30,8 @@ const SearchBlock = () => {
                     actorsChange: data.Actors,
                     directorChange: data.Director,
                     releasedChange: data.Released,
-                    ratingChange: data.imdbRating
+                    ratingChange: data.imdbRating,
+                    posterChange: data.Poster,
                 });
 
                 //Vision InfoBlock

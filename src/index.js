@@ -14,7 +14,8 @@ const defaultState = {
   actors: '',
   director: '',
   released: '',
-  rating: ''
+  rating: '',
+  poster: '',
 }
 
 const reducer = (state = defaultState, action) => {
@@ -31,11 +32,9 @@ const reducer = (state = defaultState, action) => {
                   actors: state.actors = action.actorsChange,
                   director: state.director = action.directorChange,
                   released: state.released = action.releasedChange,
-                  rating: state.rating = action.ratingChange
+                  rating: state.rating = action.ratingChange,
+                  poster: state.poster = action.posterChange,
               }
-
-    case 'DATA':
-      return{...state, data: state.data = action.changeData}
   
     default:
       return state;

@@ -6,7 +6,6 @@ import InfoTopLine from './InfoTopLine';
 
 const InfoBlock = () => {
     const info = useSelector(state => state);
-    console.log(info)
 
     return (
         <section className='info-section'>
@@ -20,6 +19,7 @@ const InfoBlock = () => {
                     director={info.director}
                     released={info.released}
                     rating={info.rating}
+                    src={info.poster}
                 />
             </div>
         </section>

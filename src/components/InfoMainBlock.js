@@ -1,6 +1,6 @@
 import './InfoMainBlock.css';
 
-const InfoMainBlock = ({ year, country, genre, actors, director, released, rating }) => {
+const InfoMainBlock = ({ year, country, genre, actors, director, released, rating, src }) => {
     return(
         <div className='InfoMainBlock'>
             <div className='InfoText'>
@@ -16,7 +16,7 @@ const InfoMainBlock = ({ year, country, genre, actors, director, released, ratin
             </div>
 
             <div className='InfoImg'>
-                <img src='/img/poster.jpg' alt='poster' className='poster'/>
+                <img src={src === 'N/A' ? '/img/poster.jpg': src} alt='poster' className='poster'/>
             </div>
         </div>
     );
