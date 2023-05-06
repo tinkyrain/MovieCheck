@@ -27,14 +27,26 @@
     padding: 20px 0;
 }
 
-.backBtn{
+.back, .backBtn{
     width: 40px;
     height: 40px;
+}
 
+.backBtn{
     background-color: white;
 }
 
-.back{
-    width: 40px;
-    height: 40px;
+@media (max-width: 325px) {
+    .error-section__popup h1{
+        font-size: 20px;
+    }
+
+    .error-section__popup h2{
+        font-size: 15px;
+    }
+
+    .back{
+        width: 30px;
+        height: 30px;
+    }
 }
