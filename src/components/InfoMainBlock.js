@@ -1,22 +1,22 @@
 import './InfoMainBlock.css';
 
-const InfoMainBlock = () => {
+const InfoMainBlock = ({ year, country, genre, actors, director, released, rating, src }) => {
     return(
         <div className='InfoMainBlock'>
             <div className='InfoText'>
                 <ul className='InfoList'>
-                    <li>Год: 2022</li>
-                    <li>Страны: США, КАНАДА, ЯПОНИЯ</li>
-                    <li>Жанры: Фантастика, Фэнтези, Боевик, Приключения, Комедия</li>
-                    <li>Актёры: Джеймс Марсден, Бен Шварц, Наташа Ротуэлл</li>
-                    <li>Мировые сборы: 1234567890$</li>
-                    <li>Премьера в мире: 25 января 2020 </li>
+                    <li>Year: {year}</li>
+                    <li>Country: {country}</li>
+                    <li>Genre: {genre}</li>
+                    <li>Actors: {actors}</li>
+                    <li>Director: {director}</li>
+                    <li>Released: {released}</li>
                 </ul>
-                <p className='rating-text'>Рейтинг КП: 6.4</p>
+                <p className='rating-text'>IMDRatings: {rating}</p>
             </div>
 
             <div className='InfoImg'>
-                <img src='/img/poster.jpg' alt='poster' className='poster'/>
+                <img src={src === 'N/A' ? '/img/poster.jpg': src} alt='poster' className='poster'/>
             </div>
         </div>
     );

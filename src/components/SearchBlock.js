@@ -15,13 +15,29 @@ const SearchBlock = () => {
 
         if(response.ok){
             const data = await response.json();
-            console.log(data);
             
-            if(data.Response == 'False'){
+            if(data.Response === 'False'){
                 alert(data.Error)
             } else {
-                dispatch({type: 'VISION', visionChange: false})
+                
+                //Movie info
+                dispatch({
+                    type: 'INFO',
+                    titleChange: data.Title,
+                    yearChange: data.Year,
+                    countryChange: data.Country,
+                    genreChange: data.Genre,
+                    actorsChange: data.Actors,
+                    directorChange: data.Director,
+                    releasedChange: data.Released,
+                    ratingChange: data.imdbRating,
+                    posterChange: data.Poster,
+                });
+
+                //Vision InfoBlock
+                dispatch({type: 'VISION', visionChange: false});
             }
+            
         } else {
             alert('Error');
         }

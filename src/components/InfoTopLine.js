@@ -2,7 +2,7 @@ import './InfoTopLine.css';
 import { useDispatch } from 'react-redux';
 
 
-const InfoTopLine = () => {
+const InfoTopLine = ({ title }) => {
 
     const dispatch = useDispatch();
 
@@ -13,10 +13,10 @@ const InfoTopLine = () => {
     return (
         <div className='topInfoLine'>
             <button className='backBtn' onClick={() => back()}>
-               <img className='backArrow' alt='Назад' src='/img/backArrow.png'/>
+               <img className='backArrow' alt='back' src='/img/backArrow.png'/>
             </button>
             <div className='block-name'>
-                <h3 className='name'>Название фильма</h3>
+                <h3 className='name'>{title}</h3>
             </div>
         </div>
     );
