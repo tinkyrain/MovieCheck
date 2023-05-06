@@ -7,6 +7,14 @@ import { Provider } from 'react-redux';
 
 const defaultState = {
   searchVision: true,
+  title: '',
+  year: '',
+  country: '',
+  genre: '',
+  actors: '',
+  director: '',
+  released: '',
+  rating: ''
 }
 
 const reducer = (state = defaultState, action) => {
@@ -14,6 +22,21 @@ const reducer = (state = defaultState, action) => {
     case 'VISION':
       return {...state, searchVision: state.searchVision = action.visionChange}
 
+    case 'INFO':
+      return {...state, 
+                  title: state.title = action.titleChange,
+                  year: state.year = action.yearChange,
+                  country: state.country = action.countryChange,
+                  genre: state.genre = action.genreChange,
+                  actors: state.actors = action.actorsChange,
+                  director: state.director = action.directorChange,
+                  released: state.released = action.releasedChange,
+                  rating: state.rating = action.ratingChange
+              }
+
+    case 'DATA':
+      return{...state, data: state.data = action.changeData}
+  
     default:
       return state;
   }

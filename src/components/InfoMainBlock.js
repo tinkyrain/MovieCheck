@@ -1,18 +1,18 @@
 import './InfoMainBlock.css';
 
-const InfoMainBlock = () => {
+const InfoMainBlock = ({ year, country, genre, actors, director, released, rating }) => {
     return(
         <div className='InfoMainBlock'>
             <div className='InfoText'>
                 <ul className='InfoList'>
-                    <li>Year: </li>
-                    <li>Country: </li>
-                    <li>Genre: </li>
-                    <li>Actors: </li>
-                    <li>Director: </li>
-                    <li>Relased: </li>
+                    <li>Year: {year}</li>
+                    <li>Country: {country}</li>
+                    <li>Genre: {genre}</li>
+                    <li>Actors: {actors}</li>
+                    <li>Director: {director}</li>
+                    <li>Released: {released}</li>
                 </ul>
-                <p className='rating-text'>IMDRatings: </p>
+                <p className='rating-text'>IMDRatings: {rating}</p>
             </div>
 
             <div className='InfoImg'>
