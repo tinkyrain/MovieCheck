@@ -10,19 +10,18 @@ const SearchBlock = () => {
 
     const URL = `http://www.omdbapi.com/?t=${name}&apikey=${KEY}`;
 
-
     async function search () {
         const response = await fetch(`${URL}`);
         if(response.ok){
             const data = await response.json();
             if(data.Response === 'False'){
-                alert(data.Error)
+                dispatch({type: 'ERROR', errorChange: true, textErrorChange: data.Error});
             } else {
                 dispatch({type: 'INFO', infoChange: data})
                 dispatch({type: 'VISION', visionChange: false});
             }
         } else {
-            alert('Error');
+            dispatch({type: 'ERROR', errorChange: true, textErrorChange: 'Request error'});
         }
     }
 

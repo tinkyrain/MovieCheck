@@ -7,6 +7,8 @@ import { Provider } from 'react-redux';
 
 const defaultState = {
   searchVision: true,
+  error: false,
+  textError: '',
   info: {},
 }
 
@@ -20,6 +22,12 @@ const reducer = (state = defaultState, action) => {
     case 'INFO':
       return{...state,
         info: state.info = action.infoChange
+      }
+    
+    case 'ERROR':
+      return{...state,
+        error: state.error = action.errorChange,
+        textError: state.textError = action.textErrorChange
       }
   
     default:
